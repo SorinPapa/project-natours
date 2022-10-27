@@ -4,6 +4,8 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 
 /* Basic reset:
  */
@@ -52,8 +54,8 @@ html {
 
 .header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .header__logo {
@@ -76,18 +78,18 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
 
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary--main {
   display: block;
   font-weight: 400;
-  font-size: 60px;
-  letter-spacing: 35px;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
 
   /* animation-name: moveInLeft;
   animation-duration: 3s; */
@@ -97,8 +99,8 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 .heading-primary--sub {
   display: block;
   font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 20px;
+  font-size: 2rem;
+  letter-spacing: 2rem;
 
   animation: moveInRight 3s ease-out;
 }
@@ -106,11 +108,11 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(20px);
+    transform: translateX(2rem);
   }
 
   100% {
@@ -122,11 +124,11 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translate(-20px);
+    transform: translate(-2rem);
   }
 
   100% {
@@ -139,7 +141,7 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -153,16 +155,16 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 }
 
 .btn:active {
@@ -170,7 +172,7 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 }
 
 .btn--white {
-  background-color: #fff;
+  background-color: $color-white;
   color: $color-grey-dark;
 }
 
@@ -179,7 +181,7 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -188,7 +190,7 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
