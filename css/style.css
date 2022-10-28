@@ -1,17 +1,3 @@
-/* Basic reset:
- */
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
 *,
 *::after,
 *::before {
@@ -22,57 +8,36 @@ body {
 html {
   font-size: 62.5%; }
 
-/* Header start */
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+body {
+  box-sizing: border-box; }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 35px;
-  /* width: 35px; nu ii mai dau, width, ii dau browserul automat */ }
-
-/*
-aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
-.logo:hover{
-  animation: moveInLeft 2s ease-out;
-} */
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-weight: 400;
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  /* animation-name: moveInLeft;
+  .heading-primary--main {
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    /* animation-name: moveInLeft;
   animation-duration: 3s; */
-  animation: moveInLeft 3s; }
-
-.heading-primary--sub {
-  display: block;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 2rem;
-  animation: moveInRight 3s ease-out; }
+    animation: moveInLeft 3s; }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2rem;
+    animation: moveInRight 3s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -103,9 +68,7 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
     opacity: 1;
     transform: translate(0); } }
 
-.btn,
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -117,6 +80,10 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    /* ca sa il fac sa "se piarda in esterior ii dau opacite=0 si practic "fades out" ! */
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px); }
@@ -124,6 +91,8 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -137,16 +106,32 @@ aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
   z-index: -1;
   transition: all 0.4s; }
 
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  /* ca sa il fac sa "se piarda in esterior ii dau opacite=0 si practic "fades out" ! */
-  opacity: 0; }
-
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-/* Header end */
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*
+aceeasi animatie pe care am creat-o mai jos pot sa pun si ca efect de hover...
+.logo:hover{
+  animation: moveInLeft 2s ease-out;
+} */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 35px;
+    /* width: 35px; nu ii mai dau, width, ii dau browserul automat */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
