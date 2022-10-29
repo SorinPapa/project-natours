@@ -1,12 +1,10 @@
-
-// am construit sistemul de grid cu float. 
+// am construit sistemul de grid cu float.
 
 .row {
   // 1140px=114rem : unitati responsive
   // max-width     :pentru fluiditate/adaptabilitate in functie de ecran
   // daca are suficienta latime se va folosi de ea
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   // vreau la ultimul rand margin-bottom:0
@@ -14,12 +12,10 @@
     margin-bottom: $gutter-vertical;
   }
 
-  
   @include clearfix;
 
   // ma folosesc de un atribut pentru a selecta toate clasele care incep cu "col-"
   [class^="col-"] {
-    background-color: orange;
     float: left;
 
     &:not(:last-child) {
